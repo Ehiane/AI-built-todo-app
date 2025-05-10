@@ -1,5 +1,5 @@
 # Kanban To-Do List Application
-A full-stack Kanban-style To-Do List application built with **React**, **Express.js**, and **MongoDB**.
+A full-stack Kanban-style To-Do List application built with **React**, **Express.js**, and **SQLite**. Will be configuring the rest later. 
 
 ## Demo
 https://github.com/user-attachments/assets/33a5ffbf-3501-4b61-87be-19d1a43b44bc
