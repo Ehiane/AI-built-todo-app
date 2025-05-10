@@ -4,7 +4,7 @@
   "description": "Backend for Kanban To-Do List application",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
@@ -16,6 +16,6 @@
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.10"
   }
-} 
+}
