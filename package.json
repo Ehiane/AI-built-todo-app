@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Kanban-style To-Do List application",
   "scripts": {
-    "start": "cd /home/project && concurrently \"npm run server\" \"npm run client\"",
+    "start": "cd /home/project && npm install && npm install --prefix frontend && npm install --prefix backend && concurrently \"npm run server\" \"npm run client\"",
     "server": "npm run dev --prefix backend",
     "client": "npm start --prefix frontend",
     "install-all": "npm install && npm install --prefix frontend && npm install --prefix backend"
