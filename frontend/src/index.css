@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@layer components {
+  .task-tag {
+    @apply px-2 py-1 text-xs font-semibold rounded-md;
+  }
+  
+  .task-tag-marketing {
+    @apply bg-purple-100 text-purple-700;
+  }
+  
+  .task-tag-planning {
+    @apply bg-blue-100 text-blue-700;
+  }
+  
+  .task-tag-content {
+    @apply bg-green-100 text-green-700;
+  }
+  
+  .task-tag-design {
+    @apply bg-pink-100 text-pink-700;
+  }
+  
+  .task-tag-research {
+    @apply bg-gray-100 text-gray-700;
+  }
+  
+  .task-tag-development {
+    @apply bg-indigo-100 text-indigo-700;
+  }
+}
