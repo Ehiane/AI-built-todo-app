@@ -1,7 +1,6 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box, Button, Avatar, IconButton } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, IconButton, Avatar } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import AddIcon from '@mui/icons-material/Add';
 
 const Header = () => {
   return (
@@ -16,21 +15,22 @@ const Header = () => {
           >
             My Tasks
           </Typography>
-          <Button component={RouterLink} to="/" color="primary" sx={{ fontWeight: 600 }}>
-            Tasks
-          </Button>
+          <Box sx={{ display: 'flex', gap: 1 }}>
+            <Typography
+              component={RouterLink}
+              to="/"
+              sx={{
+                textDecoration: 'none',
+                color: 'primary.main',
+                fontWeight: 600,
+                fontSize: '0.875rem'
+              }}
+            >
+              Tasks
+            </Typography>
+          </Box>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<AddIcon />}
-            component={RouterLink}
-            to="/"
-            sx={{ borderRadius: 2, fontWeight: 600 }}
-          >
-            Add Task
-          </Button>
           <IconButton>
             <Avatar src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" />
           </IconButton>
@@ -40,4 +40,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
