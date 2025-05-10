@@ -1,8 +1,11 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box, IconButton, Avatar } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+  const isTasksActive = location.pathname === '/';
+
   return (
     <AppBar position="static" color="inherit" elevation={0} sx={{ borderBottom: 1, borderColor: '#eee' }}>
       <Toolbar sx={{ justifyContent: 'space-between', px: 2 }}>
@@ -21,9 +24,20 @@ const Header = () => {
               to="/"
               sx={{
                 textDecoration: 'none',
-                color: 'primary.main',
+                color: isTasksActive ? 'primary.main' : 'text.secondary',
                 fontWeight: 600,
-                fontSize: '0.875rem'
+                fontSize: '0.875rem',
+                position: 'relative',
+                '&:after': isTasksActive ? {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: -2,
+                  left: 0,
+                  width: '100%',
+                  height: 2,
+                  backgroundColor: 'primary.main',
+                  borderRadius: 1,
+                } : {}
               }}
             >
               Tasks
