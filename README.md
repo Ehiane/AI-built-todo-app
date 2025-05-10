@@ -73,10 +73,3 @@ kanban-todo/
 └── package.json       # Root package.json for managing both apps
 ```
 
-## Screenshots
-
-### 📌 Main UI with Drag-and-Drop Columns
-![Kanban UI](./screenshots/ui-kanban-board.png)
-
-### ⚙️ AI Tools in Action During Development
-![AI Tools Example](./screenshots/ai-tools-used.png)
